@@ -159,7 +159,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = false;
 
         
-	/*checkpointData = (CCheckpointData) {
+	checkpointData = (CCheckpointData) {
 		boost::assign::map_list_of
 			(  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967"))
 			(  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846"))
@@ -181,7 +181,7 @@ public:
 			5502192,   // * total number of transactions between genesis and last checkpoint
 			//   (the tx=... number in the SetBestChain debug.log lines)
 			5500.0     // * estimated number of transactions per day after checkpoint
-	};*/
+	};
 
     }
 };
@@ -239,9 +239,12 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("litecointools.com", "testnet-seed.litecointools.com"));
+        
+        vSeeds.push_back(CDNSSeedData("example.com", "dnsseed.example.com", true));
+        
+        /*vSeeds.push_back(CDNSSeedData("litecointools.com", "testnet-seed.litecointools.com"));
         vSeeds.push_back(CDNSSeedData("loshan.co.uk", "seed-b.litecoin.loshan.co.uk", true));
-        vSeeds.push_back(CDNSSeedData("thrasher.io", "dnsseed-testnet.thrasher.io", true));
+        vSeeds.push_back(CDNSSeedData("thrasher.io", "dnsseed-testnet.thrasher.io", true));*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
