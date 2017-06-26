@@ -317,6 +317,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
         */
         
+        genesis = CreateGenesisBlock(0, 0, 0x1e0ffff0, 1, 50 * COIN);
+        consensus.hashGenesisBlock = genesis.GetHash();
+        printf("%s\n", genesis.GetHash().ToString().c_str() );
+        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str() );
+        
         genesis = CreateGenesisBlock(1498467574, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("%s\n", genesis.GetHash().ToString().c_str() );
