@@ -322,7 +322,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("%s\n", genesis.GetHash().ToString().c_str() );
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str() );
-        assert(consensus.hashGenesisBlock == uint256S("0xb1cd3c0f0445452f48738eb053b3008a7f155297949ccc7a8e94102551eb9409"));
+        assert(consensus.hashGenesisBlock == uint256S("0x49bc36ac5c9a3b7ebe6d598e33f2b9ee6176dafa6d6afe73a2b2165a2b5800d0"));
         assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
