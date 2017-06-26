@@ -68,7 +68,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 
 class CMainParams : public CChainParams {
 public:
-    CTestNetParams() {
+    CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.nMajorityEnforceBlockUpgrade = 51;
