@@ -69,7 +69,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 class CMainParams : public CChainParams {
 public:
     CMainParams() {
-        strNetworkID = "main";
+        strNetworkID = "queencoinmain";
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
@@ -135,11 +135,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("example.com", "dnsseed.example.com", true));
-        //vSeeds.push_back(CDNSSeedData("thrasher.io", "dnsseed.thrasher.io", true));
-        //vSeeds.push_back(CDNSSeedData("litecointools.com", "dnsseed.litecointools.com"));
-        //vSeeds.push_back(CDNSSeedData("litecoinpool.org", "dnsseed.litecoinpool.org"));
-        //vSeeds.push_back(CDNSSeedData("koin-project.com", "dnsseed.koin-project.com"));
+        //vSeeds.push_back(CDNSSeedData("example.com", "dnsseed.example.com", true));
+        vSeeds.push_back(CDNSSeedData("thrasher.io", "dnsseed.thrasher.io", true));
+        vSeeds.push_back(CDNSSeedData("litecointools.com", "dnsseed.litecointools.com"));
+        vSeeds.push_back(CDNSSeedData("litecoinpool.org", "dnsseed.litecoinpool.org"));
+        vSeeds.push_back(CDNSSeedData("koin-project.com", "dnsseed.koin-project.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -156,6 +156,7 @@ public:
         fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = false;
 
+        
 	checkpointData = (CCheckpointData) {
 		boost::assign::map_list_of
 			(  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967"))
