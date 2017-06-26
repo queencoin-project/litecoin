@@ -334,13 +334,13 @@ public:
         fMineBlocksOnDemand = true; 
         fTestnetToBeDeprecatedFieldRPC = false;
 
-	checkpointData = (CCheckpointData){
+	/*checkpointData = (CCheckpointData){
 		boost::assign::map_list_of
 			( 0, uint256S("0x00")),
 			0,
 			0,
 			0
-	};
+	};*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
