@@ -29,7 +29,7 @@ namespace Checkpoints {
     double GuessVerificationProgress(const CCheckpointData& data, CBlockIndex *pindex, bool fSigchecks) {
         if (pindex==NULL)
             return 0.0;
-        return 0.0;
+
         int64_t nNow = time(NULL);
 
         double fSigcheckVerificationFactor = fSigchecks ? SIGCHECK_VERIFICATION_FACTOR : 1.0;
@@ -56,7 +56,7 @@ namespace Checkpoints {
     }
 
     CBlockIndex* GetLastCheckpoint(const CCheckpointData& data)
-    {return NULL;
+    {
         const MapCheckpoints& checkpoints = data.mapCheckpoints;
 
         BOOST_REVERSE_FOREACH(const MapCheckpoints::value_type& i, checkpoints)
