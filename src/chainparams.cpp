@@ -317,10 +317,6 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
         */
         
-        genesis = CreateGenesisBlock(0, 0, 0x1e0ffff0, 1, 50 * COIN);
-        consensus.hashGenesisBlock = genesis.GetHash();
-        printf("%s\n", genesis.GetHash().ToString().c_str() );
-        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str() );
         
         genesis = CreateGenesisBlock(1498467574, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -340,7 +336,7 @@ public:
 
 	checkpointData = (CCheckpointData){
 		boost::assign::map_list_of
-			( 0, uint256S("0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206")),
+			( 0, uint256S("f6c29975f280454d0f9a0113854312c3bff919c96d820e5cdf249ed4ec283120")),
 			0,
 			0,
 			0
